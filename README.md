@@ -1,74 +1,72 @@
 # Employee Management System
 
-## 📖 Project Overview
-This is a Spring Boot REST API project developed to learn backend development using Java and Spring Boot.
-
-The project manages employee information and demonstrates CRUD (Create, Read, Update and Delete) operations using REST APIs.
+A Spring Boot REST API project for managing employee records using Java, Spring Boot, Spring Data JPA, Hibernate, and MySQL.
 
 ---
 
-## 🛠 Tech Stack
+## 🚀 Tech Stack
 
 - Java 25
-- Spring Boot
+- Spring Boot 4
 - Spring Data JPA
 - Hibernate
 - MySQL
 - Maven
-- Git
-- GitHub
 - IntelliJ IDEA
-- Postman
+- Git & GitHub
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```
 src
-│
-├── controller
-├── entity
-├── repository
-├── service
+ ├── controller
+ ├── entity
+ ├── repository
+ ├── service
+ │     └── impl
+ └── resources
 ```
 
 ---
 
-## 🚀 Features
+## ✅ Day 1 - Project Setup
 
-- Add Employee
-- Get Employee
-- Update Employee
-- Delete Employee
-
----
-
-## 🗄 Database
-
-Database : MySQL
-
-Database Name :
-
-```
-employee_db
-```
+- Created Spring Boot project.
+- Configured Maven.
+- Connected MySQL database.
+- Created Employee entity.
+- Successfully ran the application.
+- Uploaded the project to GitHub.
 
 ---
 
-## 📅 Progress
+## ✅ Day 2 - Repository & Service Layer
 
-### ✅ Day 1
-
-- Spring Boot project created
-- Maven configured
-- MySQL connected
-- Application successfully running
-- Employee entity created
-- Project uploaded to GitHub
+- Created EmployeeRepository using JpaRepository.
+- Created EmployeeService interface.
+- Created EmployeeServiceImpl class.
+- Implemented saveEmployee() method.
+- Implemented getAllEmployees() method.
+- Learned Dependency Injection using @Autowired.
+- Successfully tested the application.
+- Uploaded Day 2 code to GitHub.
 
 ---
 
-## 👩‍💻 Developed By
+## 📅 Learning Progress
+
+- ✅ Day 1 - Project Setup
+- ✅ Day 2 - Repository & Service Layer
+- ⏳ Day 3 - Controller Layer
+- ⏳ Day 4 - CRUD APIs
+- ⏳ Day 5 - Postman Testing
+- ⏳ Day 6 - Update & Delete APIs
+- ⏳ Day 7 - Exception Handling
+
+---
+
+## 👩‍💻 Developer
 
 **Shruti Indore**
