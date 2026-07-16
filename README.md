@@ -15,7 +15,7 @@ A Spring Boot REST API project for managing employee records using Java, Spring 
 - IntelliJ IDEA
 - Git & GitHub
 
----
+---       
 
 ## 📁 Project Structure
 
@@ -55,16 +55,28 @@ src
 
 ---
 
+## ✅ Day 3 - REST API Development
+
+- Created EmployeeController
+- Implemented POST API to save employee data
+- Implemented GET API to fetch all employees
+- Implemented GET API to fetch employee by ID
+- Tested APIs using Postman
+- Added and verified employee data in MySQL Workbench
+- Learned SQL commands: SELECT, INSERT, TRUNCATE
+- Connected Controller → Service → Repository → MySQL
+
+---
+
 ## 📅 Learning Progress
 
-- ✅ Day 1 - Project Setup
+- ✅ Day 1 - Spring Boot Project Setup & MySQL Connection
 - ✅ Day 2 - Repository & Service Layer
-- ⏳ Day 3 - Controller Layer
-- ⏳ Day 4 - CRUD APIs
-- ⏳ Day 5 - Postman Testing
-- ⏳ Day 6 - Update & Delete APIs
-- ⏳ Day 7 - Exception Handling
-
+- ✅ Day 3 - Controller Layer, POST API, GET All Employees API & GET Employee By ID API
+- ⏳ Day 4 - Update Employee (PUT API)
+- ⏳ Day 5 - Delete Employee (DELETE API)
+- ⏳ Day 6 - Exception Handling & Validation
+- ⏳ Day 7 - Final Testing, Documentation & Project Completion
 ---
 
 ## 👩‍💻 Developer
