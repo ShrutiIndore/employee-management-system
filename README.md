@@ -112,15 +112,14 @@ GET /api/employees/{id}
 
 ## ✅ Day 5 - ResponseEntity & HTTP Status Codes
 
+- Learned the purpose of ResponseEntity in Spring Boot.
 - Implemented ResponseEntity in all REST APIs.
-- Returned proper HTTP status codes.
-- POST API returns 201 Created.
-- GET APIs return 200 OK.
-- PUT API returns 200 OK.
-- DELETE API returns 200 OK.
-- Improved REST API response handling.
-- Tested all APIs successfully using Postman.
-
+- Updated POST API to return HTTP Status 201 (Created).
+- Updated GET APIs to return HTTP Status 200 (OK).
+- Updated PUT API to return HTTP Status 200 (OK).
+- Updated DELETE API to return HTTP Status 200 (OK).
+- Improved REST API response handling by returning proper HTTP status codes.
+- Tested all CRUD APIs successfully using Postman.
 ---
 
 
