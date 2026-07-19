@@ -1,6 +1,9 @@
 package com.shruti.ems.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "employees")
@@ -10,10 +13,16 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "First Name cannot be blank")
+    @Size(min = 2, max = 30, message = "First Name must be between 2 and 30 characters")
     private String firstName;
 
+    @NotBlank(message = "Last Name cannot be blank")
+    @Size(min = 2, max = 30, message = "Last Name must be between 2 and 30 characters")
     private String lastName;
 
+    @NotBlank(message = "Email cannot be blank")
+    @Email(message = "Please enter a valid email")
     private String email;
 
     public Employee() {

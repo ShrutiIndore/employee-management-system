@@ -120,18 +120,41 @@ GET /api/employees/{id}
 - Updated DELETE API to return HTTP Status 200 (OK).
 - Improved REST API response handling by returning proper HTTP status codes.
 - Tested all CRUD APIs successfully using Postman.
+
 ---
 
+## ✅ Day 6 - Validation & Global Exception Handling
+
+### Topics Learned
+- Bean Validation
+- @Valid
+- @NotBlank
+- @Size
+- @Email
+- Global Exception Handling
+- MethodArgumentNotValidException
+- Custom Validation Error Responses
+
+### Features Implemented
+- Added validation for employee fields.
+- Prevented invalid data from being stored.
+- Implemented custom validation error responses.
+- Handled ResourceNotFoundException globally.
+- Tested validation and exception handling using Postman.
+
+---
 
 ## 📅 Learning Progress
 
 - ✅ Day 1 - Spring Boot Project Setup & MySQL Connection
 - ✅ Day 2 - Repository & Service Layer
 - ✅ Day 3 - Controller Layer, POST API, GET APIs
-- ✅ Day 4 - PUT API, DELETE API, Custom Exception & Global Exception Handler
+- ✅ Day 4 - PUT API, DELETE API, Custom Exception
 - ✅ Day 5 - ResponseEntity & HTTP Status Codes
-- ⏳ Day 6 - Validation (@Valid, @NotBlank, @Email, @Size)
-- ⏳ Day 7 - Final Testing, Documentation & Project Completion
+- ✅ Day 6 - Validation & Global Exception Handling
+- ⏳ Day 7 - Swagger API Documentation
+- ⏳ Day 8 - Spring Data JPA Custom Queries
+
 ---
 
 ## 🎯 Features Completed

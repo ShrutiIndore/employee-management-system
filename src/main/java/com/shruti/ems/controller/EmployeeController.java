@@ -5,6 +5,7 @@ import com.shruti.ems.service.EmployeeService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee) {
+    public ResponseEntity<Employee> saveEmployee(@Valid @RequestBody Employee employee) {
 
         Employee savedEmployee = employeeService.saveEmployee(employee);
 
@@ -45,7 +46,7 @@ public class EmployeeController {
     @PutMapping("{id}")
     public ResponseEntity<Employee> updateEmployee(
             @PathVariable("id") Long employeeId,
-            @RequestBody Employee employee) {
+            @Valid @RequestBody Employee employee) {
 
         Employee updatedEmployee =
                 employeeService.updateEmployee(employee, employeeId);
