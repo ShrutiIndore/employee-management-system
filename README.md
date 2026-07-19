@@ -97,14 +97,41 @@ GET /api/employees/{id}
 
 ---
 
+## ✅ Day 4 - Update, Delete & Exception Handling
+
+- Implemented PUT API to update employee details.
+- Implemented DELETE API to remove employee records.
+- Created custom exception class (ResourceNotFoundException).
+- Implemented Global Exception Handler using @RestControllerAdvice.
+- Improved error handling for invalid employee IDs.
+- Returned meaningful error messages when employee is not found.
+- Tested PUT and DELETE APIs using Postman.
+- Successfully verified CRUD operations with MySQL.
+
+---
+
+## ✅ Day 5 - ResponseEntity & HTTP Status Codes
+
+- Implemented ResponseEntity in all REST APIs.
+- Returned proper HTTP status codes.
+- POST API returns 201 Created.
+- GET APIs return 200 OK.
+- PUT API returns 200 OK.
+- DELETE API returns 200 OK.
+- Improved REST API response handling.
+- Tested all APIs successfully using Postman.
+
+---
+
+
 ## 📅 Learning Progress
 
 - ✅ Day 1 - Spring Boot Project Setup & MySQL Connection
 - ✅ Day 2 - Repository & Service Layer
-- ✅ Day 3 - Controller Layer, POST API, GET All Employees API & GET Employee By ID API
+- ✅ Day 3 - Controller Layer, POST API, GET APIs
 - ✅ Day 4 - PUT API, DELETE API, Custom Exception & Global Exception Handler
-- ⏳ Day 5 - ResponseEntity & HTTP Status Codes
-- ⏳ Day 6 - Validation (@Valid) & Exception Improvements
+- ✅ Day 5 - ResponseEntity & HTTP Status Codes
+- ⏳ Day 6 - Validation (@Valid, @NotBlank, @Email, @Size)
 - ⏳ Day 7 - Final Testing, Documentation & Project Completion
 ---
 

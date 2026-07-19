@@ -3,6 +3,8 @@ package com.shruti.ems.controller;
 import com.shruti.ems.entity.Employee;
 import com.shruti.ems.service.EmployeeService;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -17,40 +19,46 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public Employee saveEmployee(@RequestBody Employee employee) {
-        return employeeService.saveEmployee(employee);
+    public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee) {
+
+        Employee savedEmployee = employeeService.saveEmployee(employee);
+
+        return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
 
     @GetMapping
-    public List<Employee> getAllEmployees() {
-        return employeeService.getAllEmployees();
+    public ResponseEntity<List<Employee>> getAllEmployees() {
+
+        List<Employee> employees = employeeService.getAllEmployees();
+
+        return ResponseEntity.ok(employees);
     }
 
     @GetMapping("{id}")
-    public Employee getEmployeeById(@PathVariable("id") Long employeeId)
-    {
-        return employeeService.getEmployeeById(employeeId);
+    public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long employeeId) {
+
+        Employee employee = employeeService.getEmployeeById(employeeId);
+
+        return ResponseEntity.ok(employee);
     }
 
     @PutMapping("{id}")
-    public Employee updateEmployee(@PathVariable("id") Long employeeId,
-                                   @RequestBody Employee employee) {
+    public ResponseEntity<Employee> updateEmployee(
+            @PathVariable("id") Long employeeId,
+            @RequestBody Employee employee) {
 
-        System.out.println("Controller: Update API called");
+        Employee updatedEmployee =
+                employeeService.updateEmployee(employee, employeeId);
 
-        Employee updatedEmployee = employeeService.updateEmployee(employee, employeeId);
-
-        System.out.println(updatedEmployee);
-
-        return updatedEmployee;
+        return ResponseEntity.ok(updatedEmployee);
     }
 
     @DeleteMapping("{id}")
-    public String deleteEmployee(@PathVariable("id") Long employeeId)
-    {
+    public ResponseEntity<String> deleteEmployee(
+            @PathVariable("id") Long employeeId) {
+
         employeeService.deleteEmployee(employeeId);
 
-        return "Employee deleted successfully!";
+        return ResponseEntity.ok("Employee deleted successfully!");
     }
-
 }
