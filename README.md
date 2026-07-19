@@ -99,16 +99,13 @@ GET /api/employees/{id}
 
 ## 📅 Learning Progress
 
-| Day | Status | Topic |
-|------|--------|------------------------------|
-| Day 1 | ✅ | Spring Boot Project Setup & MySQL Connection |
-| Day 2 | ✅ | Repository & Service Layer |
-| Day 3 | ✅ | Controller, POST API, GET APIs |
-| Day 4 | ⏳ | Update Employee (PUT API) |
-| Day 5 | ⏳ | Delete Employee (DELETE API) |
-| Day 6 | ⏳ | Exception Handling & Validation |
-| Day 7 | ⏳ | Final Testing & Project Completion |
-
+- ✅ Day 1 - Spring Boot Project Setup & MySQL Connection
+- ✅ Day 2 - Repository & Service Layer
+- ✅ Day 3 - Controller Layer, POST API, GET All Employees API & GET Employee By ID API
+- ✅ Day 4 - PUT API, DELETE API, Custom Exception & Global Exception Handler
+- ⏳ Day 5 - ResponseEntity & HTTP Status Codes
+- ⏳ Day 6 - Validation (@Valid) & Exception Improvements
+- ⏳ Day 7 - Final Testing, Documentation & Project Completion
 ---
 
 ## 🎯 Features Completed

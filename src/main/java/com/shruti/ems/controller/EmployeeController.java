@@ -36,6 +36,21 @@ public class EmployeeController {
     public Employee updateEmployee(@PathVariable("id") Long employeeId,
                                    @RequestBody Employee employee) {
 
-        return employeeService.updateEmployee(employee, employeeId);
+        System.out.println("Controller: Update API called");
+
+        Employee updatedEmployee = employeeService.updateEmployee(employee, employeeId);
+
+        System.out.println(updatedEmployee);
+
+        return updatedEmployee;
     }
+
+    @DeleteMapping("{id}")
+    public String deleteEmployee(@PathVariable("id") Long employeeId)
+    {
+        employeeService.deleteEmployee(employeeId);
+
+        return "Employee deleted successfully!";
+    }
+
 }
