@@ -144,16 +144,121 @@ GET /api/employees/{id}
 
 ---
 
+# Day 7 - Swagger API Documentation
+
+## Objectives
+- Learn what Swagger is
+- Integrate Swagger with Spring Boot
+- Generate REST API documentation automatically
+- Test APIs directly from the browser
+
+---
+
+## What I Learned
+- What is Swagger/OpenAPI
+- How Swagger integrates with Spring Boot
+- How to add Swagger dependency using Maven
+- How Swagger automatically scans REST Controllers
+- How to test APIs using Swagger UI
+- Difference between Postman and Swagger
+- API documentation using OpenAPI Specification
+
+---
+
+## Dependency Added
+
+```xml
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.8.9</version>
+</dependency>
+```
+
+---
+
+## Swagger URL
+
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
+---
+
+## OpenAPI JSON
+
+```
+http://localhost:8080/v3/api-docs
+```
+
+---
+
+## APIs Available
+
+- POST /api/employees
+- GET /api/employees
+- GET /api/employees/{id}
+- PUT /api/employees/{id}
+- DELETE /api/employees/{id}
+
+---
+
+## Features Implemented
+
+- API Documentation
+- Interactive Swagger UI
+- Automatic Endpoint Discovery
+- CRUD API Testing
+- OpenAPI 3.1 Support
+
+---
+
+## Technologies Used
+
+- Java 25
+- Spring Boot 4.1.0
+- Spring Web MVC
+- Spring Data JPA
+- MySQL
+- Maven
+- Swagger (Springdoc OpenAPI)
+
+---
+
+## Learning Outcome
+
+- Understood API documentation.
+- Learned how Swagger works with Spring Boot.
+- Tested REST APIs without using Postman.
+- Learned how Swagger automatically generates documentation from Controller classes.
+- Improved understanding of REST API development.
+
+---
+
+## Project Status
+
+✅ Employee CRUD Operations Completed
+
+✅ Validation Implemented
+
+✅ Global Exception Handling Implemented
+
+✅ Swagger API Documentation Added
+
+✅ Project Successfully Running
+
+---
+
 ## 📅 Learning Progress
 
-- ✅ Day 1 - Spring Boot Project Setup & MySQL Connection
-- ✅ Day 2 - Repository & Service Layer
-- ✅ Day 3 - Controller Layer, POST API, GET APIs
-- ✅ Day 4 - PUT API, DELETE API, Custom Exception
-- ✅ Day 5 - ResponseEntity & HTTP Status Codes
-- ✅ Day 6 - Validation & Global Exception Handling
-- ⏳ Day 7 - Swagger API Documentation
-- ⏳ Day 8 - Spring Data JPA Custom Queries
+- ✅ Day 1 – Spring Boot Project Setup & MySQL Database Connection
+- ✅ Day 2 – Repository Layer & Service Layer
+- ✅ Day 3 – REST Controller, POST API & GET APIs
+- ✅ Day 4 – PUT API, DELETE API & Custom Exception Handling
+- ✅ Day 5 – ResponseEntity, HTTP Status Codes & CRUD Testing
+- ✅ Day 6 – Bean Validation & Global Exception Handling
+- ✅ Day 7 – Swagger (OpenAPI) Integration & API Documentation
+- ⏳ Day 8 – Spring Data JPA Custom Queries
 
 ---
 
