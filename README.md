@@ -335,24 +335,72 @@ List<Employee> findEmployeesByFirstNameNative(String firstName);
 ```
 GET /api/employees/search-native?firstName=Sayali
 ```
+---
 
 ---
-## 📅 Learning Progress
+
+# ✅ Day 11 - Pagination & Sorting
+
+## 📚 Topics Covered
+
+- Spring Data JPA Pagination
+- Page Interface
+- Pageable Interface
+- PageRequest
+- Sorting using Sort class
+- Ascending Order
+- Descending Order
+
+---
+
+## ✅ Features Implemented
+
+- Retrieve employees page by page
+- Control page number and page size
+- Sort employees by First Name (Ascending)
+- Sort employees by Last Name (Descending)
+- Tested Pagination APIs using Swagger
+- Tested Sorting APIs using Swagger
+
+---
+
+## APIs Added
+
+### Pagination
+
+```http
+GET /api/employees/pagination?pageNo=0&pageSize=3
+```
+
+### Sort by First Name
+
+```http
+GET /api/employees/sort/firstname
+```
+
+### Sort by Last Name (Descending)
+
+```http
+GET /api/employees/sort/lastname
+```
+
+---
 
 ## 📅 Learning Progress
 
 - ✅ Day 1 – Spring Boot Project Setup & MySQL Database Connection
 - ✅ Day 2 – Repository Layer & Service Layer
-- ✅ Day 3 – REST Controller & CRUD APIs
-- ✅ Day 4 – Update, Delete & Exception Handling
-- ✅ Day 5 – ResponseEntity & HTTP Status Codes
+- ✅ Day 3 – REST Controller, POST API & GET APIs
+- ✅ Day 4 – PUT API, DELETE API & Custom Exception Handling
+- ✅ Day 5 – ResponseEntity, HTTP Status Codes & CRUD Testing
 - ✅ Day 6 – Bean Validation & Global Exception Handling
 - ✅ Day 7 – Swagger (OpenAPI) Integration & API Documentation
 - ✅ Day 8 – Spring Data JPA Derived Query Methods
 - ✅ Day 9 – JPQL Queries using @Query
-- ✅ Day 10 – Native SQL Queries using @Query(nativeQuery = true)
+- ✅ Day 10 – Native SQL Queries
+- ✅ Day 11 – Pagination & Sorting
+- ⏳ Day 12 – DTO (Data Transfer Object) Pattern
 
-- ⏳ Day 11 – Pagination & Sorting
 ---
 
 ## 🎯 Features Completed

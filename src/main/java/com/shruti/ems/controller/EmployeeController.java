@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -91,5 +92,31 @@ public class EmployeeController {
         employeeService.deleteEmployee(employeeId);
 
         return ResponseEntity.ok("Employee deleted successfully!");
+    }
+
+    @GetMapping("/pagination")
+    public ResponseEntity<Page<Employee>> getEmployeesWithPagination(
+            @RequestParam int pageNo,
+            @RequestParam int pageSize)
+    {
+        return ResponseEntity.ok(
+                employeeService.getEmployeesWithPagination(pageNo, pageSize)
+        );
+    }
+
+    @GetMapping("/sort/firstname")
+    public ResponseEntity<List<Employee>> getEmployeesSortedByFirstName()
+    {
+        return ResponseEntity.ok(
+                employeeService.getEmployeesSortedByFirstName()
+        );
+    }
+
+    @GetMapping("/sort/lastname")
+    public ResponseEntity<List<Employee>> getEmployeesSortedByLastNameDesc()
+    {
+        return ResponseEntity.ok(
+                employeeService.getEmployeesSortedByLastNameDesc()
+        );
     }
 }

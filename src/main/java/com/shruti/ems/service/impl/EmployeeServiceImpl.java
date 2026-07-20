@@ -5,6 +5,10 @@ import com.shruti.ems.exception.ResourceNotFoundException;
 import com.shruti.ems.repository.EmployeeRepository;
 import com.shruti.ems.service.EmployeeService;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -46,6 +50,30 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Employee> getEmployeesByFirstNameNative(String firstName)
     {
         return employeeRepository.findEmployeesByFirstNameNative(firstName);
+    }
+
+    @Override
+    public Page<Employee> getEmployeesWithPagination(int pageNo, int pageSize)
+    {
+        Pageable pageable = PageRequest.of(pageNo, pageSize);
+
+        return employeeRepository.findAll(pageable);
+    }
+
+    @Override
+    public List<Employee> getEmployeesSortedByFirstName()
+    {
+        return employeeRepository.findAll(
+                Sort.by("firstName").ascending()
+        );
+    }
+
+    @Override
+    public List<Employee> getEmployeesSortedByLastNameDesc()
+    {
+        return employeeRepository.findAll(
+                Sort.by("lastName").descending()
+        );
     }
 
     // Get Employee By ID
