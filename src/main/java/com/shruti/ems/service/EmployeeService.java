@@ -13,6 +13,8 @@ public interface EmployeeService
 
     List<Employee> getEmployeesByFirstNameJPQL(String firstName);
 
+    List<Employee> getEmployeesByFirstNameNative(String firstName);
+
     Employee getEmployeeById(Long employeeId);
 
     Employee updateEmployee(Employee employee, Long id);

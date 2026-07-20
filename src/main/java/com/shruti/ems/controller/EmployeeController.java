@@ -55,6 +55,16 @@ public class EmployeeController {
         return ResponseEntity.ok(employees);
     }
 
+    @GetMapping("/search-native")
+    public ResponseEntity<List<Employee>> getEmployeesByFirstNameNative(
+            @RequestParam String firstName)
+    {
+        List<Employee> employees =
+                employeeService.getEmployeesByFirstNameNative(firstName);
+
+        return ResponseEntity.ok(employees);
+    }
+
     @GetMapping("{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long employeeId) {
 

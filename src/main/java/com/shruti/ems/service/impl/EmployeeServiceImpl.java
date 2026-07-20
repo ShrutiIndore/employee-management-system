@@ -42,6 +42,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.findEmployeesByFirstNameJPQL(firstName);
     }
 
+    @Override
+    public List<Employee> getEmployeesByFirstNameNative(String firstName)
+    {
+        return employeeRepository.findEmployeesByFirstNameNative(firstName);
+    }
+
     // Get Employee By ID
     @Override
     public Employee getEmployeeById(Long employeeId) {
