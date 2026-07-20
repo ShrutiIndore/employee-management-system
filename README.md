@@ -249,6 +249,37 @@ http://localhost:8080/v3/api-docs
 
 ---
 
+## 📅 Day 8 - Spring Data JPA Derived Query Methods
+
+### ✅ Topics Covered
+
+- Introduction to Derived Query Methods
+- Spring Data JPA Query Method Naming
+- Searching Employees by First Name
+- Repository Method Naming Convention
+- Testing APIs using Postman & Swagger
+
+### ✅ Features Implemented
+
+- Created custom repository method
+- Implemented search employee by first name
+- Added Service Layer implementation
+- Added Controller endpoint
+- Successfully tested using Swagger and Postman
+
+### 📌 Repository Method
+
+```java
+List<Employee> findByFirstName(String firstName);
+```
+
+### 📌 API
+
+```
+GET /api/employees/search?firstName=Sayali
+```
+---
+
 ## 📅 Day 9 - JPQL Queries using @Query
 
 ### ✅ Topics Covered
@@ -274,19 +305,54 @@ List<Employee> findEmployeesByFirstNameJPQL(String firstName);
 ```
 ---
 
+## 📅 Day 10 - Native SQL Queries using @Query
+
+### ✅ Topics Covered
+
+- Native SQL Queries
+- @Query(nativeQuery = true)
+- Difference between JPQL and Native SQL
+- Executing SQL directly from Repository
+- Testing Native SQL APIs using Postman & Swagger
+
+### ✅ Features Implemented
+
+- Search Employee by First Name using Native SQL
+- Added Native SQL Repository Method
+- Added Service Layer implementation
+- Added Controller endpoint
+- Successfully tested using Swagger and Postman
+
+### 📌 Native SQL Query
+
+```java
+@Query(value = "SELECT * FROM employees WHERE first_name = :firstName", nativeQuery = true)
+List<Employee> findEmployeesByFirstNameNative(String firstName);
+```
+
+### 📌 API
+
+```
+GET /api/employees/search-native?firstName=Sayali
+```
+
+---
+## 📅 Learning Progress
+
 ## 📅 Learning Progress
 
 - ✅ Day 1 – Spring Boot Project Setup & MySQL Database Connection
 - ✅ Day 2 – Repository Layer & Service Layer
-- ✅ Day 3 – REST Controller, POST API & GET APIs
-- ✅ Day 4 – PUT API, DELETE API & Custom Exception Handling
-- ✅ Day 5 – ResponseEntity, HTTP Status Codes & CRUD Testing
+- ✅ Day 3 – REST Controller & CRUD APIs
+- ✅ Day 4 – Update, Delete & Exception Handling
+- ✅ Day 5 – ResponseEntity & HTTP Status Codes
 - ✅ Day 6 – Bean Validation & Global Exception Handling
 - ✅ Day 7 – Swagger (OpenAPI) Integration & API Documentation
-- ⏳ Day 8 – Spring Data JPA Custom Queries
+- ✅ Day 8 – Spring Data JPA Derived Query Methods
 - ✅ Day 9 – JPQL Queries using @Query
-- ⏳ Day 10 – Native SQL Queries
+- ✅ Day 10 – Native SQL Queries using @Query(nativeQuery = true)
 
+- ⏳ Day 11 – Pagination & Sorting
 ---
 
 ## 🎯 Features Completed
@@ -299,11 +365,16 @@ List<Employee> findEmployeesByFirstNameJPQL(String firstName);
 - ✅ Repository Layer
 - ✅ Service Layer
 - ✅ REST Controller
-- ✅ Create Employee API
-- ✅ Get All Employees API
-- ✅ Get Employee By ID API
+- ✅ CRUD Operations (Create, Read, Update, Delete)
+- ✅ ResponseEntity & HTTP Status Codes
+- ✅ Bean Validation
+- ✅ Global Exception Handling
+- ✅ Swagger API Documentation
+- ✅ Derived Query Methods
+- ✅ JPQL Queries
+- ✅ Native SQL Queries
 - ✅ Postman API Testing
-
+- ✅ Swagger API Testing
 ---
 
 ## 👩‍💻 Developer
