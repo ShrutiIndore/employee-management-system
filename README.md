@@ -271,21 +271,20 @@ http://localhost:8080/v3/api-docs
 @Query("SELECT e FROM Employee e WHERE e.firstName = :firstName")
 List<Employee> findEmployeesByFirstNameJPQL(String firstName);
 
+```
 ---
-
 
 ## 📅 Learning Progress
 
-- ✅ Day 1 - Spring Boot Project Setup & MySQL Connection
-- ✅ Day 2 - Repository & Service Layer
-- ✅ Day 3 - Controller Layer, POST API, GET APIs
-- ✅ Day 4 - PUT API, DELETE API, Custom Exception
-- ✅ Day 5 - ResponseEntity & HTTP Status Codes
-- ✅ Day 6 - Validation & Global Exception Handling
-- ✅ Day 7 - Swagger API Documentation
-- ✅ Day 8 - Spring Data JPA Derived Query Methods
-- ✅ Day 9 - JPQL Queries using @Query
-- ⏳ Day 10 - Native SQL Queries
+- ✅ Day 1 – Spring Boot Project Setup & MySQL Database Connection
+- ✅ Day 2 – Repository Layer & Service Layer
+- ✅ Day 3 – REST Controller, POST API & GET APIs
+- ✅ Day 4 – PUT API, DELETE API & Custom Exception Handling
+- ✅ Day 5 – ResponseEntity, HTTP Status Codes & CRUD Testing
+- ✅ Day 6 – Bean Validation & Global Exception Handling
+- ✅ Day 7 – Swagger (OpenAPI) Integration & API Documentation
+- ⏳ Day 8 – Spring Data JPA Custom Queries
+
 ---
 
 ## 🎯 Features Completed
