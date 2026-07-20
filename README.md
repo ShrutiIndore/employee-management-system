@@ -284,6 +284,8 @@ List<Employee> findEmployeesByFirstNameJPQL(String firstName);
 - ✅ Day 6 – Bean Validation & Global Exception Handling
 - ✅ Day 7 – Swagger (OpenAPI) Integration & API Documentation
 - ⏳ Day 8 – Spring Data JPA Custom Queries
+- ✅ Day 9 – JPQL Queries using @Query
+- ⏳ Day 10 – Native SQL Queries
 
 ---
 
