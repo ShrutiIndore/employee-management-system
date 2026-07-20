@@ -25,8 +25,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     // Get All Employees
     @Override
-    public List<Employee> getAllEmployees() {
+    public List<Employee> getAllEmployees()
+    {
         return employeeRepository.findAll();
+    }
+
+    @Override
+    public List<Employee> getEmployeesByFirstName(String firstName)
+    {
+        return employeeRepository.findByFirstName(firstName);
+    }
+
+    @Override
+    public List<Employee> getEmployeesByFirstNameJPQL(String firstName)
+    {
+        return employeeRepository.findEmployeesByFirstNameJPQL(firstName);
     }
 
     // Get Employee By ID

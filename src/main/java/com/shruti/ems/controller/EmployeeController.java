@@ -35,6 +35,26 @@ public class EmployeeController {
         return ResponseEntity.ok(employees);
     }
 
+    @GetMapping("/search")
+    public ResponseEntity<List<Employee>> getEmployeesByFirstName(
+            @RequestParam String firstName)
+    {
+        List<Employee> employees =
+                employeeService.getEmployeesByFirstName(firstName);
+
+        return ResponseEntity.ok(employees);
+    }
+
+    @GetMapping("/search-jpql")
+    public ResponseEntity<List<Employee>> getEmployeesByFirstNameJPQL(
+            @RequestParam String firstName)
+    {
+        List<Employee> employees =
+                employeeService.getEmployeesByFirstNameJPQL(firstName);
+
+        return ResponseEntity.ok(employees);
+    }
+
     @GetMapping("{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long employeeId) {
 

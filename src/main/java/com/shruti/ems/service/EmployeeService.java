@@ -9,6 +9,10 @@ public interface EmployeeService
 
     List<Employee> getAllEmployees();
 
+    List<Employee> getEmployeesByFirstName(String firstName);
+
+    List<Employee> getEmployeesByFirstNameJPQL(String firstName);
+
     Employee getEmployeeById(Long employeeId);
 
     Employee updateEmployee(Employee employee, Long id);
