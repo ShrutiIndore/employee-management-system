@@ -1,31 +1,31 @@
 package com.shruti.ems.service;
 
-import com.shruti.ems.entity.Employee;
+import com.shruti.ems.dto.EmployeeDTO;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
 
 public interface EmployeeService
 {
-    Employee saveEmployee(Employee employee);
+    EmployeeDTO saveEmployee(EmployeeDTO employeeDto);
 
-    List<Employee> getAllEmployees();
+    List<EmployeeDTO> getAllEmployees();
 
-    List<Employee> getEmployeesByFirstName(String firstName);
+    List<EmployeeDTO> getEmployeesByFirstName(String firstName);
 
-    List<Employee> getEmployeesByFirstNameJPQL(String firstName);
+    List<EmployeeDTO> getEmployeesByFirstNameJPQL(String firstName);
 
-    List<Employee> getEmployeesByFirstNameNative(String firstName);
+    List<EmployeeDTO> getEmployeesByFirstNameNative(String firstName);
 
-    Employee getEmployeeById(Long employeeId);
+    EmployeeDTO getEmployeeById(Long employeeId);
 
-    Employee updateEmployee(Employee employee, Long id);
+    EmployeeDTO updateEmployee(EmployeeDTO employeeDto, Long id);
 
     void deleteEmployee(Long id);
 
-    Page<Employee> getEmployeesWithPagination(int pageNo, int pageSize);
+    Page<EmployeeDTO> getEmployeesWithPagination(int pageNo, int pageSize);
 
-    List<Employee> getEmployeesSortedByFirstName();
+    List<EmployeeDTO> getEmployeesSortedByFirstName();
 
-    List<Employee> getEmployeesSortedByLastNameDesc();
+    List<EmployeeDTO> getEmployeesSortedByLastNameDesc();
 }
